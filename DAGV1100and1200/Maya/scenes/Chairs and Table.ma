@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Chairs and Table.ma
-//Last modified: Sun, Jan 25, 2026 10:10:06 PM
+//Last modified: Sun, Jan 25, 2026 10:24:18 PM
 //Codeset: UTF-8
 requires maya "2026";
 currentUnit -l centimeter -a degree -t film;
@@ -9,7 +9,7 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Mac OS X 15.6.1";
-fileInfo "UUID" "BF848E60-2F49-0930-BE7B-DA9A29365D62";
+fileInfo "UUID" "D59B8881-E845-17AC-2E66-029219C765D8";
 createNode transform -s -n "persp";
 	rename -uid "0C144581-B742-3BF3-08FA-65A0BADF33F8";
 	setAttr ".v" no;
@@ -918,15 +918,15 @@ createNode mesh -n "ChairMeshw1Shape" -p "ChairMeshw1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "020CFBBA-6F48-1EBB-4D28-2280BF52C527";
+	rename -uid "35EAE011-844F-AE1F-CC5C-FEBE221E5486";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "37981C08-F343-8C09-F288-0DB79716FC9D";
+	rename -uid "08D817A3-2942-346E-9842-B0AAC2EA6463";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "181E478E-BB45-DFE9-D3E9-3A8099072F10";
+	rename -uid "4D6BDEDE-ED49-A0DF-B976-FFA2DF804B74";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "65DB7CEB-7048-B5C7-EF3F-1C961F1E4629";
+	rename -uid "35EFFD5B-B648-1C6E-D418-B9A381655A49";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli";
 	setAttr ".dli[2]" 1;
@@ -934,7 +934,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "301F771F-5A48-ABF6-EFF9-2080E4C27F88";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "CD6876AC-4B42-2E41-8E8C-12AB7B9532C8";
+	rename -uid "4F978963-D647-4F93-9B57-16BB9E6980EC";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "74AA0DCD-8F47-79C3-45AF-7C97EEBFEE31";
 	setAttr ".g" yes;
@@ -1044,7 +1044,7 @@ createNode polyExtrudeFace -n "polyExtrudeFace7";
 	setAttr ".ws" yes;
 	setAttr ".pvt" -type "float3" 6.7365389 9.6231928 -7.4004216 ;
 	setAttr ".rs" 1465418670;
-	setAttr ".lt" -type "double3" -1.463151576107388e-15 -1.7763568394002505e-15 2.5894488929437864 ;
+	setAttr ".lt" -type "double3" -1.4631515761073882e-15 -1.7763568394002505e-15 2.5894488929437864 ;
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" 4.1891472838988193 9.2295172047500458 -7.8716179310868268 ;
 	setAttr ".cbx" -type "double3" 9.2839302533928532 10.016869129782675 -6.9292256888159809 ;
