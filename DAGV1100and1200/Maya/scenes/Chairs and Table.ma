@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Chairs and Table.ma
-//Last modified: Tue, Feb 10, 2026 06:52:19 PM
+//Last modified: Tue, Feb 10, 2026 07:11:54 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "Table" -rfn "TableRN" -op "v=0;" -typ "mayaAscii" "/Users/charlottedickinson/Documents/Sammy Projects.nosync/Essentials/DAGV1100and1200/Maya//scenes/Table.ma";
 file -rdi 1 -ns "Chair" -rfn "ChairRN" -op "v=0;" -typ "mayaAscii" "/Users/charlottedickinson/Documents/Sammy Projects.nosync/Essentials/DAGV1100and1200/Maya//scenes/Chair.ma";
@@ -13,6 +13,7 @@ file -rdi 1 -ns "Flower_Vase" -rfn "Flower_VaseRN" -op "v=0;" -typ "mayaAscii"
 		 "/Users/charlottedickinson/Documents/Sammy Projects.nosync/Essentials/DAGV1100and1200/Maya//scenes/Flower Vase.ma";
 file -rdi 1 -ns "Potted_Plant" -rfn "Potted_PlantRN" -op "v=0;" -typ "mayaAscii"
 		 "/Users/charlottedickinson/Documents/Sammy Projects.nosync/Essentials/DAGV1100and1200/Maya//scenes/Potted Plant.ma";
+file -rdi 1 -ns "Pitcher" -rfn "PitcherRN" -op "v=0;" -typ "mayaAscii" "/Users/charlottedickinson/Documents/Sammy Projects.nosync/Essentials/DAGV1100and1200/Maya//scenes/Pitcher.ma";
 file -r -ns "Table" -dr 1 -rfn "TableRN" -op "v=0;" -typ "mayaAscii" "/Users/charlottedickinson/Documents/Sammy Projects.nosync/Essentials/DAGV1100and1200/Maya//scenes/Table.ma";
 file -r -ns "Chair" -dr 1 -rfn "ChairRN" -op "v=0;" -typ "mayaAscii" "/Users/charlottedickinson/Documents/Sammy Projects.nosync/Essentials/DAGV1100and1200/Maya//scenes/Chair.ma";
 file -r -ns "Chair1" -dr 1 -rfn "ChairRN1" -op "v=0;" -typ "mayaAscii" "/Users/charlottedickinson/Documents/Sammy Projects.nosync/Essentials/DAGV1100and1200/Maya//scenes/Chair.ma";
@@ -24,6 +25,7 @@ file -r -ns "Flower_Vase" -dr 1 -rfn "Flower_VaseRN" -op "v=0;" -typ "mayaAscii"
 		 "/Users/charlottedickinson/Documents/Sammy Projects.nosync/Essentials/DAGV1100and1200/Maya//scenes/Flower Vase.ma";
 file -r -ns "Potted_Plant" -dr 1 -rfn "Potted_PlantRN" -op "v=0;" -typ "mayaAscii"
 		 "/Users/charlottedickinson/Documents/Sammy Projects.nosync/Essentials/DAGV1100and1200/Maya//scenes/Potted Plant.ma";
+file -r -ns "Pitcher" -dr 1 -rfn "PitcherRN" -op "v=0;" -typ "mayaAscii" "/Users/charlottedickinson/Documents/Sammy Projects.nosync/Essentials/DAGV1100and1200/Maya//scenes/Pitcher.ma";
 requires maya "2026";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
@@ -31,19 +33,19 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Mac OS X 15.7.3";
-fileInfo "UUID" "64FF6B7B-154F-F6A8-360C-4F9C186AFC33";
+fileInfo "UUID" "BCED2C7E-744E-8173-DA1F-1898BB879CC9";
 createNode transform -s -n "persp";
 	rename -uid "0C144581-B742-3BF3-08FA-65A0BADF33F8";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 19.056645589600691 11.592296044460975 28.372659399430283 ;
-	setAttr ".r" -type "double3" -9.9383527404294547 35.399999999999778 9.7547731108247702e-16 ;
+	setAttr ".t" -type "double3" 22.5884868395007 10.595312338513907 35.899956048323169 ;
+	setAttr ".r" -type "double3" 3.261647259569787 22.600000000000456 1.0765948204792427e-16 ;
 	setAttr ".rp" -type "double3" 8.7041485130612273e-14 -1.3100631690576847e-14 0 ;
 	setAttr ".rpt" -type "double3" -3.1174679138725354e-14 -6.2573546360829417e-16 -6.4323647415760813e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "67373B8B-304B-8770-0DB5-51B715CC2EEE";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 35.337414435883638;
+	setAttr ".coi" 43.21054970161132;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -352,15 +354,15 @@ createNode transform -n "group1";
 	setAttr ".rp" -type "double3" -0.95153100503930688 -0.011779248714447021 -0.22210924324354053 ;
 	setAttr ".sp" -type "double3" -0.95153100503930688 -0.011779248714447021 -0.22210924324354053 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "6C6E3381-C544-F688-43CC-E2B7D82999F4";
+	rename -uid "C956CFA4-4846-D981-404C-9B92174B5003";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "137EBF15-2F43-52E0-C861-64885C79C959";
+	rename -uid "DB8A91F2-894F-6D84-69DD-599FB622B8C6";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "75503863-EE49-ACF6-E475-93882968AAEC";
+	rename -uid "1A2A9B94-8F4E-7DEC-7FCF-5D82B50A660D";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "8B56C073-BE4A-C55D-1635-97B3931FE19E";
+	rename -uid "95EE0800-714F-5789-F2BE-A0B7F51131F2";
 	setAttr ".cdl" 2;
 	setAttr -s 3 ".dli[1:2]"  2 1;
 	setAttr -s 3 ".dli";
@@ -368,7 +370,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "301F771F-5A48-ABF6-EFF9-2080E4C27F88";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "6572255C-E145-0E34-1D0A-8EA3B4A4E220";
+	rename -uid "7C727D4B-4841-1772-859B-029E0408D5AD";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "74AA0DCD-8F47-79C3-45AF-7C97EEBFEE31";
 	setAttr ".g" yes;
@@ -549,7 +551,7 @@ createNode reference -n "Flower_VaseRN";
 		"Flower_VaseRN"
 		"Flower_VaseRN" 0
 		"Flower_VaseRN" 1
-		2 "|Flower_Vase:Flowe_Vase" "translate" " -type \"double3\" 5 3 9";
+		2 "|Flower_Vase:Flowe_Vase" "translate" " -type \"double3\" 3.0860279330863829 8.80883365477266089 -8.7428728105126936";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "Potted_PlantRN";
@@ -560,7 +562,7 @@ createNode reference -n "Potted_PlantRN";
 		"Potted_PlantRN" 12
 		2 "|Potted_Plant:Pot" "translate" " -type \"double3\" -9.07330104413072469 -0.026824978602100202 -8.87648654637166068"
 		
-		2 "|Potted_Plant:Pot" "rotate" " -type \"double3\" 0 28.24260306579722268 0"
+		2 "|Potted_Plant:Pot" "rotate" " -type \"double3\" 0 28.24260306579722624 0"
 		
 		2 "|Potted_Plant:Pot" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Potted_Plant:Pot|Potted_Plant:Dirt|Potted_Plant:Leaf_3" "translate" " -type \"double3\" 0.24450679711192716 0 0.058122075987918846"
@@ -583,6 +585,19 @@ createNode reference -n "Potted_PlantRN";
 		" -type \"double3\" 0 0 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
+createNode reference -n "PitcherRN";
+	rename -uid "052D89A1-7D4B-14AE-A682-8188B040B62C";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"PitcherRN"
+		"PitcherRN" 0
+		"PitcherRN" 3
+		2 "|Pitcher:Pitcher" "translate" " -type \"double3\" 5.79749622920504226 3.64590191726123525 7.93890018874743397"
+		
+		2 "|Pitcher:Pitcher" "rotate" " -type \"double3\" -180.37448473452741382 -38.40854668512390191 0.23265617121801338"
+		
+		2 "|Pitcher:Pitcher" "scale" " -type \"double3\" 0.52601196788468796 0.52601196788468796 0.52601196788468796";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -601,7 +616,7 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
-	setAttr -s 5 ".r";
+	setAttr -s 6 ".r";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -609,7 +624,7 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.48076922 0.48076922 0.48076922 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 42 ".dsm";
+	setAttr -s 43 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 27 ".gn";
 select -ne :initialParticleSE;
