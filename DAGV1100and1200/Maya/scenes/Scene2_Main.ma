@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Scene2_Main.ma
-//Last modified: Tue, Apr 14, 2026 10:34:01 PM
+//Last modified: Mon, Apr 20, 2026 01:44:42 AM
 //Codeset: UTF-8
 file -rdi 1 -ns "Pirate_WHeel" -rfn "Pirate_WHeelRN" -op "v=0;" -typ "mayaAscii"
 		 "/Users/charlottedickinson/Documents/Sammy Projects.nosync/Essentials/DAGV1100and1200/Maya//scenes/Pirate WHeel.ma";
@@ -12,6 +12,10 @@ file -rdi 1 -ns "ShipInBottle" -rfn "ShipInBottleRN" -op "v=0;" -typ "mayaAscii"
 		 "/Users/charlottedickinson/Documents/Sammy Projects.nosync/Essentials/DAGV1100and1200/Maya//scenes/ShipInBottle.ma";
 file -rdi 1 -ns "ShipInBottle1" -rfn "ShipInBottleRN1" -op "v=0;" -typ "mayaAscii"
 		 "/Users/charlottedickinson/Documents/Sammy Projects.nosync/Essentials/DAGV1100and1200/Maya//scenes/ShipInBottle.ma";
+file -rdi 1 -ns "deepSeaDiver" -rfn "deepSeaDiverRN" -op "v=0;" -typ "mayaAscii"
+		 "/Users/charlottedickinson/Documents/Sammy Projects.nosync/Essentials/DAGV1100and1200/Maya//scenes/deepSeaDiver.ma";
+file -rdi 1 -ns "deepSeaDiver1" -rfn "deepSeaDiverRN1" -op "v=0;" -typ "mayaAscii"
+		 "/Users/charlottedickinson/Documents/Sammy Projects.nosync/Essentials/DAGV1100and1200/Maya//scenes/deepSeaDiver.ma";
 file -r -ns "Pirate_WHeel" -dr 1 -rfn "Pirate_WHeelRN" -op "v=0;" -typ "mayaAscii"
 		 "/Users/charlottedickinson/Documents/Sammy Projects.nosync/Essentials/DAGV1100and1200/Maya//scenes/Pirate WHeel.ma";
 file -r -ns "lifePreserver" -dr 1 -rfn "lifePreserverRN" -op "v=0;" -typ "mayaAscii"
@@ -22,26 +26,30 @@ file -r -ns "ShipInBottle" -dr 1 -rfn "ShipInBottleRN" -op "v=0;" -typ "mayaAsci
 		 "/Users/charlottedickinson/Documents/Sammy Projects.nosync/Essentials/DAGV1100and1200/Maya//scenes/ShipInBottle.ma";
 file -r -ns "ShipInBottle1" -dr 1 -rfn "ShipInBottleRN1" -op "v=0;" -typ "mayaAscii"
 		 "/Users/charlottedickinson/Documents/Sammy Projects.nosync/Essentials/DAGV1100and1200/Maya//scenes/ShipInBottle.ma";
+file -r -ns "deepSeaDiver" -dr 1 -rfn "deepSeaDiverRN" -op "v=0;" -typ "mayaAscii"
+		 "/Users/charlottedickinson/Documents/Sammy Projects.nosync/Essentials/DAGV1100and1200/Maya//scenes/deepSeaDiver.ma";
+file -r -ns "deepSeaDiver1" -dr 1 -rfn "deepSeaDiverRN1" -op "v=0;" -typ "mayaAscii"
+		 "/Users/charlottedickinson/Documents/Sammy Projects.nosync/Essentials/DAGV1100and1200/Maya//scenes/deepSeaDiver.ma";
 requires maya "2026";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
-		 "mtoa" "5.5.4.2";
+		 -nodeType "aiStandardSurface" "mtoa" "5.5.4.2";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Mac OS X 15.7.3";
-fileInfo "UUID" "8996784D-8F47-5BE3-BA03-C6AE60D55F21";
+fileInfo "UUID" "67B48BF2-8E4D-89FA-5F07-BC90B83C700A";
 createNode transform -s -n "persp";
 	rename -uid "338B5DF5-ED4B-2541-E451-E9A25449344F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -44.386534830463368 15.790228584585945 -1.3009328948387922 ;
-	setAttr ".r" -type "double3" -12.338352729166989 -451.79999999968447 -7.6333312355124402e-14 ;
+	setAttr ".t" -type "double3" -53.192502868516513 15.53332456425496 28.242164823595068 ;
+	setAttr ".r" -type "double3" -11.138352729149306 -421.39999999958286 4.9831973773862505e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "875833E2-024A-B8F1-5D29-EA820DCDCB32";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 54.659225062245952;
+	setAttr ".coi" 67.948417895755185;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -9107,20 +9115,20 @@ createNode mesh -n "pCubeShape4" -p "pCube4";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "1E897C90-E340-F781-3ABE-F2AA42E354B3";
-	setAttr -s 16 ".lnk";
-	setAttr -s 16 ".slnk";
+	rename -uid "DBF3500B-8546-429B-D49C-AA867EBB0C7C";
+	setAttr -s 32 ".lnk";
+	setAttr -s 32 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "3CAF9646-1641-54BD-FF05-BDA2D5B20FFB";
+	rename -uid "9A386FCA-BD40-F935-1D19-3D8B3A1042E7";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "1375BE93-1240-7D42-E975-17B9D4936BD8";
+	rename -uid "1BF4CC59-784F-7C6A-BAD8-8FB917565FAB";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "3E1A53C5-B34A-B686-1939-7BA8B910BED1";
+	rename -uid "8B797E4D-424B-93C6-9828-4BB88876D65F";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "A7231859-4B4D-D1EA-5FE2-8CB80162F760";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "568B036B-E542-A57F-5CCA-BB88B86C32B7";
+	rename -uid "781FE0F8-CD4E-C300-E0A0-DD8325549E0F";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "D9D25F44-C24D-B045-3362-80AF44A03F39";
 	setAttr ".g" yes;
@@ -9198,9 +9206,9 @@ createNode reference -n "lifePreserverRN1";
 		"lifePreserverRN1"
 		"lifePreserverRN1" 0
 		"lifePreserverRN1" 2
-		2 "|lifePreserver1:lifePreserver" "translate" " -type \"double3\" 0.85122754015264745 1.12555893702227161 -4.29407133419603326"
+		2 "|lifePreserver1:lifePreserver" "translate" " -type \"double3\" 7.59141886119141418 6.78543674131592667 -7.00503482443739323"
 		
-		2 "|lifePreserver1:lifePreserver" "rotate" " -type \"double3\" -122.0746347537464942 -57.82674823384940055 128.44815160753108785";
+		2 "|lifePreserver1:lifePreserver" "rotate" " -type \"double3\" -179.30358283005020326 -232.52341360302727935 177.55365050396315496";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode polyCube -n "polyCube1";
@@ -9219,7 +9227,7 @@ createNode reference -n "ShipInBottleRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"ShipInBottleRN"
 		"ShipInBottleRN" 0
-		"ShipInBottleRN" 9
+		"ShipInBottleRN" 42
 		2 "|ShipInBottle:ShipInBottle" "translate" " -type \"double3\" -6.73063574432504286 -55.23405677593387963 34.05191948171918881"
 		
 		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat" "translate" " -type \"double3\" 2.67122179198703336 6.43500252433167752 6.09094813285232384"
@@ -9230,14 +9238,113 @@ createNode reference -n "ShipInBottleRN";
 		
 		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pCube4" "translate" 
+		" -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pCube5" "translate" 
+		" -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pSphere1" "translate" 
+		" -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pCylinder4" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pCylinder5" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pCube6" "translate" 
+		" -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pCylinder6" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pCube7" "translate" 
+		" -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pCylinder7" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pCylinder8" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pCylinder9" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pCylinder10" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pCylinder11" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pCylinder12" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pCylinder13" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pCylinder14" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pCylinder15" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pCylinder16" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pCylinder18" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pCylinder19" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pCylinder20" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pCylinder21" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pCylinder22" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pCylinder23" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pCylinder24" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pCylinder25" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Boat|ShipInBottle:pCylinder26" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
 		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Bottle___Base" "translate" " -type \"double3\" 2.67122179198703336 6.43500252433167752 11.07926907817090623"
 		
 		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Bottle___Base" "rotate" " -type \"double3\" 0 -90.18919786660120508 0"
 		
 		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Bottle___Base" "scale" " -type \"double3\" 1 1 1"
 		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Bottle___Base|ShipInBottle:Base|ShipInBottle:pCube1" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Bottle___Base|ShipInBottle:Base|ShipInBottle:pCube2" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Bottle___Base|ShipInBottle:Base|ShipInBottle:pCube3" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Bottle___Base|ShipInBottle:Bottle|ShipInBottle:pTorus1" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Bottle___Base|ShipInBottle:Bottle|ShipInBottle:Bottle|ShipInBottle:pCylinder1" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
+		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Bottle___Base|ShipInBottle:Bottle|ShipInBottle:Bottle|ShipInBottle:pCylinder2" 
+		"translate" " -type \"double3\" 1207.30748123688158557 372.0997478790291666 130.63061045011659189"
+		
 		2 "|ShipInBottle:ShipInBottle|ShipInBottle:Bottle___Base|ShipInBottle:Bottle|ShipInBottle:Bottle|ShipInBottle:pCylinder27" 
-		"translate" " -type \"double3\" 18.24873785769434065 0 -0.060259845479151419";
+		"translate" " -type \"double3\" 111.17270211286701453 93.83825170141243177 -27.81887304828430985";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
@@ -9262,9 +9369,9 @@ createNode reference -n "ShipInBottleRN1";
 		"ShipInBottleRN1"
 		"ShipInBottleRN1" 0
 		"ShipInBottleRN1" 4
-		2 "|ShipInBottle1:ShipInBottle" "translate" " -type \"double3\" 7.84878495403323129 5.15014924462019508 -10.37263873050999052"
+		2 "|ShipInBottle1:ShipInBottle" "translate" " -type \"double3\" 7.84878495403323129 5.15014924462019508 11.59196694001474981"
 		
-		2 "|ShipInBottle1:ShipInBottle" "rotate" " -type \"double3\" 0 -87.30562545973214128 0"
+		2 "|ShipInBottle1:ShipInBottle" "rotate" " -type \"double3\" 0 -87.30562545973215549 0"
 		
 		2 "|ShipInBottle1:ShipInBottle" "scale" " -type \"double3\" 0.56308419636664342 0.56308419636664342 0.56308419636664342"
 		
@@ -9274,6 +9381,89 @@ lockNode -l 1 ;
 createNode polyCube -n "polyCube2";
 	rename -uid "33765462-DE47-C838-D35A-A6B3FA9277FB";
 	setAttr ".cuv" 4;
+createNode reference -n "deepSeaDiverRN";
+	rename -uid "8EE26960-254E-1275-A0F3-1181F3131B36";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"deepSeaDiverRN"
+		"deepSeaDiverRN" 0
+		"deepSeaDiverRN" 4
+		2 "|deepSeaDiver:deepSeaDiver" "translate" " -type \"double3\" 0 -7.10694947559058576 -16.15035210689813994"
+		
+		2 "|deepSeaDiver:deepSeaDiver" "rotate" " -type \"double3\" 0 -50.09414243949024836 0"
+		
+		2 "|deepSeaDiver:deepSeaDiver" "scale" " -type \"double3\" 0.56096682117425156 0.56096682117425156 0.56096682117425156"
+		
+		2 "|deepSeaDiver:deepSeaDiver" "rotatePivotTranslate" " -type \"double3\" 0 0 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "deepSeaDiverRN1";
+	rename -uid "01F99D39-484F-88B9-7F2C-268723F003C6";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"deepSeaDiverRN1"
+		"deepSeaDiverRN1" 0
+		"deepSeaDiverRN1" 4
+		2 "|deepSeaDiver1:deepSeaDiver" "translate" " -type \"double3\" 16.33690248122503874 -8.62700962308503172 -17.21195182587915085"
+		
+		2 "|deepSeaDiver1:deepSeaDiver" "rotate" " -type \"double3\" 0 3.19400154496199518 0"
+		
+		2 "|deepSeaDiver1:deepSeaDiver" "scale" " -type \"double3\" 0.44550434040272879 0.44550434040272879 0.44550434040272879"
+		
+		2 "|deepSeaDiver1:deepSeaDiver" "rotatePivotTranslate" " -type \"double3\" 0 0 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode aiStandardSurface -n "Floor1";
+	rename -uid "5C02C7C2-244B-1655-3FF6-179F83D4AACB";
+	setAttr ".base_color" -type "float3" 0.94700003 0.78379464 0.39868701 ;
+	setAttr ".specular_color" -type "float3" 1.0000241 0.98225331 0.75295413 ;
+	setAttr ".specular_roughness" 0.15000000596046448;
+	setAttr ".specular_IOR" 1.5199999809265137;
+	setAttr ".metalness" 1;
+	setAttr ".transmission_depth" 1;
+	setAttr ".coat_roughness" 0;
+	setAttr ".coat_IOR" 4;
+createNode shadingEngine -n "aiStandardSurface1SG";
+	rename -uid "DCB5CC8B-D542-5D04-48DD-0AAD850A89BE";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo1";
+	rename -uid "66E664F5-BB45-A1C9-AFBD-258380ED009E";
+createNode aiStandardSurface -n "Walls";
+	rename -uid "A71C4C5A-CA4F-485E-93E5-358F71140047";
+	setAttr ".base_color" -type "float3" 0.31574798 0.41233945 0.81800002 ;
+	setAttr ".specular_roughness" 0.32467532157897949;
+	setAttr ".specular_IOR" 1.5199999809265137;
+	setAttr ".transmission_depth" 1;
+	setAttr ".subsurface" 0.20000000298023224;
+	setAttr ".subsurface_color" -type "float3" 0.10470402 0.24188282 0.81800002 ;
+	setAttr ".coat_roughness" 0;
+	setAttr ".coat_IOR" 1;
+	setAttr ".coat_affect_color" 1;
+	setAttr ".coat_affect_roughness" 1;
+createNode shadingEngine -n "aiStandardSurface2SG";
+	rename -uid "5324C28F-B945-21CA-87D4-FD95C03F2FE9";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo2";
+	rename -uid "E908DAB0-8D45-4056-E003-87AF9C505672";
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "DC6074D6-B141-893C-D708-FDA25E9A556B";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -498.80950398861495 -307.14284493809708 ;
+	setAttr ".tgi[0].vh" -type "double2" 498.80950398861495 307.14284493809708 ;
+	setAttr -s 4 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" -280;
+	setAttr ".tgi[0].ni[0].y" 300;
+	setAttr ".tgi[0].ni[0].nvs" 2659;
+	setAttr ".tgi[0].ni[1].x" 92.857139587402344;
+	setAttr ".tgi[0].ni[1].y" 300;
+	setAttr ".tgi[0].ni[1].nvs" 1923;
+	setAttr ".tgi[0].ni[2].x" 92.857139587402344;
+	setAttr ".tgi[0].ni[2].y" 300;
+	setAttr ".tgi[0].ni[2].nvs" 1923;
+	setAttr ".tgi[0].ni[3].x" -280;
+	setAttr ".tgi[0].ni[3].y" 300;
+	setAttr ".tgi[0].ni[3].nvs" 2659;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -9285,18 +9475,18 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 3;
 select -ne :renderPartition;
-	setAttr -s 16 ".st";
+	setAttr -s 32 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 16 ".s";
+	setAttr -s 32 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 7 ".u";
+	setAttr -s 11 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 6 ".r";
+	setAttr -s 8 ".r";
 select -ne :defaultTextureList1;
-	setAttr -s 7 ".tx";
+	setAttr -s 11 ".tx";
 select -ne :lambert1;
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
@@ -9304,12 +9494,13 @@ select -ne :standardSurface1;
 select -ne :openPBR_shader1;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 83 ".dsm";
+	setAttr -s 153 ".dsm";
 	setAttr ".ro" yes;
+	setAttr -s 12 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :initialMaterialInfo;
-	setAttr -s 5 ".t";
+	setAttr -s 7 ".t";
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
@@ -9333,15 +9524,39 @@ connectAttr "polyTweakUV1.uvtk[0]" "FloorShape.uvst[0].uvtw";
 connectAttr "polyCube2.out" "pCubeShape4.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "aiStandardSurface1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "aiStandardSurface2SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "aiStandardSurface1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "aiStandardSurface2SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "polyCube1.out" "polyTweakUV1.ip";
+connectAttr "Floor1.out" "aiStandardSurface1SG.ss";
+connectAttr "FloorShape.iog" "aiStandardSurface1SG.dsm" -na;
+connectAttr "aiStandardSurface1SG.msg" "materialInfo1.sg";
+connectAttr "Floor1.msg" "materialInfo1.m";
+connectAttr "Floor1.msg" "materialInfo1.t" -na;
+connectAttr "Walls.out" "aiStandardSurface2SG.ss";
+connectAttr "Wall2Shape.iog" "aiStandardSurface2SG.dsm" -na;
+connectAttr "Wall1Shape.iog" "aiStandardSurface2SG.dsm" -na;
+connectAttr "aiStandardSurface2SG.msg" "materialInfo2.sg";
+connectAttr "Walls.msg" "materialInfo2.m";
+connectAttr "Walls.msg" "materialInfo2.t" -na;
+connectAttr "Floor1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "aiStandardSurface1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr "aiStandardSurface2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+		;
+connectAttr "Walls.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+		;
+connectAttr "aiStandardSurface1SG.pa" ":renderPartition.st" -na;
+connectAttr "aiStandardSurface2SG.pa" ":renderPartition.st" -na;
+connectAttr "Floor1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Walls.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "FloorShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "Wall1Shape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "Wall2Shape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pTorusShape3.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCylinderShape5.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape2.iog" ":initialShadingGroup.dsm" -na;
